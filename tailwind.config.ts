@@ -1,20 +1,39 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx,html}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx,html}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx,html}",
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        dashboard: "url('/assets/images/homeBottomWallpaper.png')",
+      },
+      colors: {
+        background: "#00000",
+        main: "#DB281B",
+        orange: "#EC9932",
+        mint: "#52E4B1",
+        lightMint: "#9CE9C4",
+        pink: "#FD8684",
+        skyBlue: "#89E6FD",
+        yellow: "#E9E462",
+        purple: "#DBC5FC",
+        red: "#C6403E",
+      },
+      zIndex: {
+        header: "100",
+        eventBanner: "100",
+        dimmed: "1000",
+        modal: "1001",
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
