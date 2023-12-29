@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [menu, setMenu] = useState<MenuType>("ALL");
+  const [menu, setMenu] = useState<MenuType>("All");
   return (
     <div>
       <Image

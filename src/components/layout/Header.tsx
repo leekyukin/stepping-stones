@@ -1,9 +1,9 @@
 "use client";
 
 import { useReducer } from "react";
-import MobileHeader from "./MobileHeader";
-import Menu from "./Menu";
 import Dimmed from "./Dimmed";
+import Menu from "./Menu";
+import MobileHeader from "./MobileHeader";
 
 const Header = () => {
   const [isOpen, toggleMenu] = useReducer((state) => !state, false);

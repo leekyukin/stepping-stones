@@ -1,5 +1,15 @@
 const PATH = {
   MAIN: "/",
+  MY_PAGE: "my-page",
+  LOGIN: "/login",
+  SIGN_UP: {
+    REDIRECT_URL: {
+      KAKAO: "/shop?provider=kakao",
+      NAVER: "/shop?provider=naver",
+      GOOGLE: "/shop?provider=google",
+      FACEBOOK: "/shop?provider=facebook",
+    },
+  },
 };
 
 const COLOR = {
@@ -25,29 +35,29 @@ const COLOR_ARR = [
 ];
 
 const MENU_ARR = [
-  { image: "/assets/images/menu/all.png", name: "ALL", color: "#FFED92" },
-  { image: "/assets/images/menu/outer.png", name: "TOP", color: "#B1E2EF" },
+  { image: "/assets/images/menu/all.png", name: "All", color: "#FFED92" },
+  { image: "/assets/images/menu/outer.png", name: "Top", color: "#B1E2EF" },
   {
     image: "/assets/images/menu/pants.png",
-    name: "PANTS",
+    name: "Pants",
     color: "#FFB4A3",
   },
   {
     image: "/assets/images/menu/skirt.png",
-    name: "SKIRT",
+    name: "Skirt",
     color: "#DBC5FC",
   },
-  { image: "/assets/images/menu/acc.png", name: "ACC", color: "#89DDAF" },
+  { image: "/assets/images/menu/acc.png", name: "Acc", color: "#89DDAF" },
 ];
 
-export type MenuType = "ALL" | "TOP" | "PANTS" | "SKIRT" | "ACC";
+export type MenuType = "All" | "Top" | "Pants" | "Skirt" | "Acc";
 
 const MENU = {
-  ALL: { image: "/assets/images/menu/all.png", color: "#FFED92" },
-  TOP: { image: "/assets/images/menu/outer.png", color: "#B1E2EF" },
-  PANTS: { image: "/assets/images/menu/pants.png", color: "#FFB4A3" },
-  SKIRT: { image: "/assets/images/menu/skirt.png", color: "#DBC5FC" },
-  ACC: { image: "/assets/images/menu/acc.png", color: "#89DDAF" },
+  All: { image: "/assets/images/menu/all.png", color: "#FFED92" },
+  Top: { image: "/assets/images/menu/outer.png", color: "#B1E2EF" },
+  Pants: { image: "/assets/images/menu/pants.png", color: "#FFB4A3" },
+  Skirt: { image: "/assets/images/menu/skirt.png", color: "#DBC5FC" },
+  Acc: { image: "/assets/images/menu/acc.png", color: "#89DDAF" },
 };
 
 export { COLOR, COLOR_ARR, MENU, MENU_ARR, PATH };
