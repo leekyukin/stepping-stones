@@ -1,7 +1,6 @@
 "use client";
 
 import { signOut, useSession } from "next-auth/react";
-import { RiLogoutBoxFill } from "react-icons/ri";
 
 const MyPagePage = () => {
   const { data: session } = useSession();

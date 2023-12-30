@@ -12,7 +12,7 @@ const Header = () => {
     <div className="mx-auto max-w-md">
       <MobileHeader toggleMenu={toggleMenu} />
       <Dimmed isVisible={isOpen} close={toggleMenu} />
-      <Menu isOpen={isOpen} />
+      <Menu isOpen={isOpen} close={toggleMenu} />
     </div>
   );
 };

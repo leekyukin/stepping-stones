@@ -1,16 +1,15 @@
 "use client";
 
 import config from "@/config";
-import { MENU_ARR, MenuType } from "@/constants";
+import { MENU_ARR, PATH } from "@/constants";
+import UseGetCategoryParam from "@/hook/UseGetCategoryParam";
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 
-interface FilterProps {
-  menu: MenuType;
-  setMenu: (menu: MenuType) => void;
-}
+const Filter = () => {
+  const [category] = UseGetCategoryParam();
 
-const Filter = ({ menu, setMenu }: FilterProps) => {
   return (
     <div className="z-10 -mt-16 grid w-full grid-cols-5 items-end justify-center">
       {MENU_ARR.map((_menu) => (
@@ -19,7 +18,7 @@ const Filter = ({ menu, setMenu }: FilterProps) => {
             <Image
               className={classNames(
                 "mx-auto mb-5 h-8 w-auto animate-spin shadow-white drop-shadow-2xl",
-                menu === _menu.name ? "block" : "hidden",
+                category === _menu.name ? "block" : "hidden",
               )}
               src={config.stone}
               alt="stone"
@@ -27,13 +26,14 @@ const Filter = ({ menu, setMenu }: FilterProps) => {
               height={1000}
             />
           </div>
-          <div
-            className="cursor-pointer rounded-t-xl py-3 text-center text-sm font-bold"
-            style={{ backgroundColor: _menu.color }}
-            onClick={() => setMenu(_menu.name as MenuType)}
-          >
-            {_menu.name}
-          </div>
+          <Link href={PATH.SHOP + `?category=${_menu.name}`}>
+            <div
+              className="cursor-pointer rounded-t-xl py-3 text-center text-sm font-bold"
+              style={{ backgroundColor: _menu.color }}
+            >
+              {_menu.name}
+            </div>
+          </Link>
         </div>
       ))}
     </div>

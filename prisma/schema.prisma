@@ -10,6 +10,60 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Item {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  price           Int
+  description     String
+  discountRate    Int
+  thumbnailImage  String
+  itemImages      String[]
+  category        String
+  status          ItemStatus
+  createdAt       DateTime @default(now())
+  cartItems       CartItem[]
+}
+
+enum ItemStatus {
+  SOLD_OUT
+  PREPARING
+  SELLING
+}
+
+model CartItem {
+  id        String @id @default(uuid())
+
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+
+  item      Item @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  itemId    String
+
+  order     Order? @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId   String?
+
+  createdAt DateTime @default(now())
+}
+
+model Order {
+  id        String @id @default(uuid())
+
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+
+  cartItems CartItem[]
+  status    OrderStatus
+  createdAt DateTime @default(now())
+}
+
+enum OrderStatus {
+  BEGIN_CHECKOUT
+  PURCHASE
+  PREPARING
+  DELIVERING
+  DELIVERY_COMPLETED
+}
+
 model User {
   id            String    @id @default(uuid())
   name          String
@@ -20,6 +74,9 @@ model User {
   emailVerified DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+
+  cartItems     CartItem[]
+  orders        Order[]
 
   accounts      Account[]
   sessions      Session[]
