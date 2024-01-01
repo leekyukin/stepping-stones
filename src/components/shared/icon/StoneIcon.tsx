@@ -5,7 +5,7 @@ import Image from "next/image";
 const StoneIcon = ({ className }: { className?: string }) => {
   return (
     <Image
-      className={classNames(className, "h-8 w-auto")}
+      className={classNames(className, "w-auto")}
       src={config.stoneIcon}
       alt="stone icon"
       width={1000}

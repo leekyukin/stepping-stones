@@ -7,10 +7,10 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="mx-auto w-full max-w-md">
       <Header />
-      <div className="mx-auto max-w-md">{children}</div>
-    </>
+      {children}
+    </div>
   );
 };
 

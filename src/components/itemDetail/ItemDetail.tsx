@@ -1,5 +1,6 @@
 import StoneIcon from "@/components/shared/icon/StoneIcon";
 import Image from "next/image";
+import ItemStones from "../shared/ItemStones";
 
 interface ItemDetailProps {
   thumbnailImage: string;
@@ -23,13 +24,13 @@ const ItemDetail = ({
         }}
       >
         <Image
-          className="h-full w-auto"
+          className="h-full w-full object-contain"
           src={thumbnailImage}
           alt="item thumbnail image"
           width={1000}
           height={1000}
         />
-        <div className="bg-point absolute left-5 top-5 flex h-16 w-16 items-center rounded-full border-2 border-black text-center font-semibold leading-5">
+        <div className="absolute left-5 top-5 flex h-16 w-16 items-center rounded-full border-2 border-black bg-point text-center font-semibold leading-5">
           Only One
         </div>
       </div>
@@ -38,12 +39,10 @@ const ItemDetail = ({
         <div className="text-sm">KRW {price}</div>
       </div>
       <div className="flex h-10 gap-3">
-        <div className="bg-point flex items-center rounded-lg px-3 font-semibold">
+        <div className="flex items-center rounded-lg bg-point px-3 text-sm font-semibold">
           One and only
         </div>
-        <div className="flex items-center gap-3 rounded-lg bg-kakaoYellow px-3 py-1.5 font-semibold">
-          <StoneIcon className="h-6" /> {numberOfStones} Stone
-        </div>
+        <ItemStones numberOfStones={numberOfStones} />
       </div>
     </div>
   );

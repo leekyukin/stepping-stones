@@ -25,6 +25,7 @@ const config: Config = {
         yellow: "#E9E462",
         purple: "#DBC5FC",
         red: "#C6403E",
+        gray: "#EFEFEF",
         naver: "#13C949",
         kakaoYellow: "#FFEB3B",
         kakaoBrown: "#55413D",

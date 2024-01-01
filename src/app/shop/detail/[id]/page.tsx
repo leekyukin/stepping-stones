@@ -1,5 +1,6 @@
 "use client";
 
+import CTAButtons from "@/components/itemDetail/CTAButtons";
 import CouponButton from "@/components/itemDetail/CouponButton";
 import ItemDetail from "@/components/itemDetail/ItemDetail";
 import ItemImages from "@/components/itemDetail/ItemImages";
@@ -29,6 +30,7 @@ const ItemDetailPage = () => {
       <CouponButton />
       <DecorationBandMarquee />
       <ItemImages itemImages={item.itemImages} />
+      <CTAButtons itemId={item.id} />
     </div>
   );
 };

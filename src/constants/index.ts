@@ -5,6 +5,7 @@ const PATH = {
   SHOP: "/shop",
   ITEM_DETAIL: "/shop/detail/",
   MY_PAGE: "/my-page",
+  CART: "/cart",
   LOGIN: "/login",
   SIGN_UP: {
     REDIRECT_URL: {
