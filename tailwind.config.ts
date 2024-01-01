@@ -28,6 +28,7 @@ const config: Config = {
         naver: "#13C949",
         kakaoYellow: "#FFEB3B",
         kakaoBrown: "#55413D",
+        point: "#89FF60",
       },
       zIndex: {
         header: "100",

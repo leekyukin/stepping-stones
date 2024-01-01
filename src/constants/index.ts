@@ -3,6 +3,7 @@ import config from "@/config";
 const PATH = {
   MAIN: "/",
   SHOP: "/shop",
+  ITEM_DETAIL: "/shop/detail/",
   MY_PAGE: "/my-page",
   LOGIN: "/login",
   SIGN_UP: {

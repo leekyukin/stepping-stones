@@ -8,11 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaUser } from "react-icons/fa";
 
-interface MobileHeaderProps {
-  toggleMenu: () => void;
-}
-
-const MobileHeader = ({ toggleMenu }: MobileHeaderProps) => {
+const MobileHeader = ({ toggleMenu }: { toggleMenu: () => void }) => {
   const router = useRouter();
   const { data: session } = useSession();
 

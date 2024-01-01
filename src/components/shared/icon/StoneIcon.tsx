@@ -6,7 +6,7 @@ const StoneIcon = ({ className }: { className?: string }) => {
   return (
     <Image
       className={classNames(className, "h-8 w-auto")}
-      src={config.stone}
+      src={config.stoneIcon}
       alt="stone icon"
       width={1000}
       height={1000}

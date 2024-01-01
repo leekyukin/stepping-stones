@@ -1,12 +1,21 @@
-import { ItemType } from "@/@types/item";
+import { ItemStatus } from "@/@types/item";
 import Image from "next/image";
 
 interface ItemElementProps {
-  item: ItemType;
+  thumbnailImage: string;
+  name: string;
+  price: string;
+  status: ItemStatus;
   color: string;
 }
 
-const ItemElement = ({ item, color }: ItemElementProps) => {
+const ItemElement = ({
+  thumbnailImage,
+  name,
+  price,
+  status,
+  color,
+}: ItemElementProps) => {
   return (
     <div>
       <div
@@ -17,15 +26,15 @@ const ItemElement = ({ item, color }: ItemElementProps) => {
       >
         <Image
           className="h-full w-full object-contain"
-          src={item.thumbnailImage}
+          src={thumbnailImage}
           alt="thumbnail image"
           width={1000}
           height={1000}
         />
       </div>
       <div className="mt-2 flex flex-col items-center">
-        <div className="text-xs font-bold">{item.name}</div>
-        <div className="text-xs font-semibold">{item.price}</div>
+        <div className="text-xs font-bold">{name}</div>
+        <div className="text-xs font-semibold">{price}</div>
       </div>
     </div>
   );

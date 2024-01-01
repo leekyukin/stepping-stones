@@ -1,7 +1,6 @@
 "use client";
 
 import { useReducer } from "react";
-import Dimmed from "./Dimmed";
 import Menu from "./Menu";
 import MobileHeader from "./MobileHeader";
 
@@ -11,7 +10,6 @@ const Header = () => {
   return (
     <div className="mx-auto max-w-md">
       <MobileHeader toggleMenu={toggleMenu} />
-      <Dimmed isVisible={isOpen} close={toggleMenu} />
       <Menu isOpen={isOpen} close={toggleMenu} />
     </div>
   );

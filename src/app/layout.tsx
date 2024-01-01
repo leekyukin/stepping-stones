@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Provider>
           <Layout>{children}</Layout>
+          <div id="root-portal"></div>
         </Provider>
       </body>
     </html>

@@ -19,6 +19,7 @@ model Item {
   thumbnailImage  String
   itemImages      String[]
   category        String
+  numberOfStones  Int
   status          ItemStatus
   createdAt       DateTime @default(now())
   cartItems       CartItem[]
