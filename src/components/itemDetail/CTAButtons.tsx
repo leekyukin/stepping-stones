@@ -24,7 +24,10 @@ const CTAButtons = ({ itemId }: { itemId: string }) => {
       >
         <PiShoppingCartSimpleFill className="text-2xl" /> add to cart
       </button>
-      <button className="flex w-full items-center justify-center gap-2 rounded-se-3xl rounded-ss-xl border-2 border-b-0 border-l-[1px] border-black bg-point">
+      <button
+        className="flex w-full items-center justify-center gap-2 rounded-se-3xl rounded-ss-xl border-2 border-b-0 border-l-[1px] border-black bg-point"
+        onClick={() => router.push(PATH.ORDER)}
+      >
         <StoneIcon className="h-5" />
         Buy now
       </button>

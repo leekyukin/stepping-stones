@@ -21,16 +21,18 @@ const Receipt = ({
       </div>
       <div className="flex justify-between">
         <span className="font-semibold">Sale</span>
-        <span className="font-semibold text-red">₩ {totalDiscountPrice}</span>
+        <span className="font-semibold text-[#DD0000]">
+          ₩ {totalDiscountPrice}
+        </span>
       </div>
 
-      <hr className="my-5 border-[1.5px] border-gray" />
+      <hr className="my-2 border-[1.5px] border-gray" />
 
       <div className="flex justify-between">
         <span className="text-lg font-semibold">Total</span>
         <span className="text-xl font-semibold">₩ {totalDiscountedPrice}</span>
       </div>
-      <ItemStones numberOfStones={totalNumberOfStones} />
+      <ItemStones className="mt-5 w-32" numberOfStones={totalNumberOfStones} />
     </div>
   );
 };

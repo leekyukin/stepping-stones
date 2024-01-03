@@ -2,11 +2,12 @@ import config from "@/config";
 
 const PATH = {
   MAIN: "/",
+  LOGIN: "/login",
   SHOP: "/shop",
   ITEM_DETAIL: "/shop/detail/",
   MY_PAGE: "/my-page",
   CART: "/cart",
-  LOGIN: "/login",
+  ORDER: "/order",
   SIGN_UP: {
     REDIRECT_URL: {
       KAKAO: "/shop?provider=kakao",
@@ -55,4 +56,21 @@ const MENU = {
   Acc: { image: config.accIcon, color: "#89DDAF" },
 };
 
-export { COLOR, COLOR_ARR, MENU, MENU_ARR, PATH };
+const BANK = [
+  "케이뱅크",
+  "기업은행",
+  "신한은행",
+  "KB국민은행",
+  "하나은행",
+  "NH농협은행",
+  "우리은행",
+  "대구은행",
+  "부산은행",
+  "광주은행",
+  "SC은행",
+  "경남은행",
+  "전북은행",
+  "수협은행",
+];
+
+export { COLOR, COLOR_ARR, MENU, MENU_ARR, PATH, BANK };
