@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
+import { DeleteManyRequest } from "../../../../backend/dto/cartItem/cartItemRequest";
 import { AddToCartRequest } from "../../../../backend/dto/item/itemRequest";
 import cartItemRepository from "../../../../backend/repository/cartItemRepository";
 import { getUserId } from "../../../../backend/utils/user";
-import { DeleteManyRequest } from "../../../../backend/dto/cartItem/cartItemRequest";
 
 export async function POST(req: Request) {
   const request: AddToCartRequest = await req.json();

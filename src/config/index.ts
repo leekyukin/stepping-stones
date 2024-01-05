@@ -1,5 +1,6 @@
 interface Config {
   logo: string;
+  loader: string;
   stoneIcon: string;
   wallpaper: string;
   moreIcon: string;
@@ -17,6 +18,7 @@ interface Config {
 const createConfig: () => Config = () => {
   return {
     logo: "/assets/images/logo.png",
+    loader: "/assets/images/loader.svg",
     stoneIcon: "/assets/images/menu/all.png",
     wallpaper: "/assets/images/wallpaper.png",
     moreIcon: "/assets/images/moreIcon.png",

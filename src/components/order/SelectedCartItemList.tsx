@@ -7,8 +7,8 @@ const SelectedCartItemList = ({
   selectedCartItemList: CartItemType[];
 }) => {
   return (
-    <div className="flex h-44 w-full items-center  rounded-3xl bg-gray p-8">
-      <div className="flex h-full gap-5">
+    <div className="flex w-full rounded-3xl bg-gray p-5">
+      <div className="grid h-full w-full grid-cols-3 gap-5">
         {selectedCartItemList.slice(0, 2).map((cartItem) => (
           <ItemThumbnailImage
             key={cartItem.id}
@@ -17,7 +17,7 @@ const SelectedCartItemList = ({
           />
         ))}
         {selectedCartItemList.length - 2 > 0 && (
-          <p className="ml-5 self-center text-3xl font-bold">
+          <p className="flex h-full w-full items-center justify-center text-3xl font-bold">
             +{selectedCartItemList.length - 2}
           </p>
         )}

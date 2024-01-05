@@ -47,14 +47,17 @@ model CartItem {
 }
 
 model Order {
-  id        String @id @default(uuid())
+  id            String @id @default(uuid())
 
-  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId    String
-
-  cartItems CartItem[]
-  status    OrderStatus
-  createdAt DateTime @default(now())
+  user          User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        String
+  
+  totalPrice    Int
+  depositorName String
+  bank          String
+  cartItems     CartItem[]
+  status        OrderStatus
+  createdAt     DateTime @default(now())
 }
 
 enum OrderStatus {

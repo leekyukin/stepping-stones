@@ -7,11 +7,20 @@ import CartItemList from "@/components/cart/CartItemList";
 import Receipt from "@/components/cart/Receipt";
 import Loader from "@/components/shared/Loader";
 import { useGetCartItemList } from "@/hook/@queries/cartItem";
-import { useRecoilValue } from "recoil";
+import { useEffect } from "react";
+import { useRecoilState } from "recoil";
 
 const CartPage = () => {
   const { data: cartItemList, isLoading } = useGetCartItemList();
-  const selectedCartItemList = useRecoilValue(selectedCartItemListState);
+  const [selectedCartItemList, setSelectedCartItemList] = useRecoilState(
+    selectedCartItemListState,
+  );
+
+  useEffect(() => {
+    if (cartItemList) {
+      setSelectedCartItemList(cartItemList);
+    }
+  }, [cartItemList, setSelectedCartItemList]);
 
   const getTotalPrice = () => {
     let totalPrice = 0;
