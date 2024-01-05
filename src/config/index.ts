@@ -1,6 +1,8 @@
 interface Config {
   logo: string;
   loader: string;
+  home: string;
+  jumpMan: string;
   stoneIcon: string;
   wallpaper: string;
   moreIcon: string;
@@ -19,6 +21,8 @@ const createConfig: () => Config = () => {
   return {
     logo: "/assets/images/logo.png",
     loader: "/assets/images/loader.svg",
+    home: "/assets/images/home.png",
+    jumpMan: "/assets/images/jumpMan.png",
     stoneIcon: "/assets/images/menu/all.png",
     wallpaper: "/assets/images/wallpaper.png",
     moreIcon: "/assets/images/moreIcon.png",

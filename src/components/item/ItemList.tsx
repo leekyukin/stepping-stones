@@ -11,7 +11,7 @@ const ItemList = () => {
   const { data: itemList, isLoading } = useGetItemList(searchParams);
 
   if (isLoading) {
-    return <Loader />;
+    return setTimeout(() => <Loader />, 1000);
   }
 
   return (
