@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <div className="relative">
         <Image src={config.home} alt="home" width={1000} height={1000} />
-        <div className="absolute bottom-16 h-72 animate-bounce">
+        <div className="absolute bottom-16 aspect-square h-60 animate-bounce">
           <Image
             className="h-full w-full object-contain"
             src={config.jumpMan}
